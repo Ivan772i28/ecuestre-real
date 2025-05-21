@@ -1,24 +1,38 @@
 body {
-    background-color:#7da568;
+    background-color: #7da568;
 }
 
+/* Contenedor */
 #container {
     display: flex;
-    justify-content: end;
-    align-items: end;
-    gap: 30px;
+    justify-content: center; /* Mejor alineación */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten bien en pantallas pequeñas */
+    gap: 20px;
 }
 
-#imgface{
-    
-    height: 75px;
+/* Imágenes */
+#imgface {
+    height: auto;
+    max-width: 85px;
     padding-bottom: 10px;
-    width: 85px;
     border-radius: 10px;
 }
+
 #imginsta {
-    
-    height: 100px;
-    width: 100px;
+    height: auto;
+    max-width: 100px;
     border-radius: 50%;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    #container {
+        flex-direction: column;
+        align-items: center; /* Centra en móviles */
+    }
+
+    #imgface, #imginsta {
+        max-width: 80px; /* Reduce el tamaño en pantallas pequeñas */
+    }
 }
