@@ -1,9 +1,11 @@
 body {
-  background-color: #7da568;
+    background-color: #7da568;
     margin: 0;
     font-family: Arial, sans-serif;
-  }
-  nav {
+}
+
+/* Navegación */
+nav {
     background-color: #865050;
     color: white;
     padding: 10px 20px;
@@ -11,58 +13,69 @@ body {
     border-radius: 30px;
     justify-content: space-between;
     align-items: center;
-  }
-  nav a {
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
-  }
-  nav a:hover {
+}
+
+nav a:hover {
     text-decoration: underline;
-  }
-  .nav-links {
+}
+
+/* Contenedor principal */
+#contenedor {
     display: flex;
-  }
-  #contenedor {
-    display: flex;
-    align-items: start; /* Alinea el contenido verticalmente */
-    justify-content:space-around; /* Espaciado entre texto e imágenes */
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
 }
 
 #divin {
-  background-color: #7da568; /* Color de fondo del área de texto */
-    width: 50%; /* Define el tamaño del área de texto */
-    padding: 0px;
+    background-color: #7da568;
+    padding: 20px;
     border-radius: 30px;
-    height: 400px;
-    width: 400px;
+    max-width: 90%;
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* Contenedor de imágenes */
 #divimg {
-  border-radius: 20px;
-  margin-top: 70px;
-    width: 10px; /* Define el tamaño del área de imágenes */
     display: flex;
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    gap: 10px; /* Espacio entre imágenes */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-  
+#divimg img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+}
 
-  p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-}
-#img1{
-  border-radius: 30px;
-  margin-top: 0px;
-}
-#img2{
-  border-radius: 30px;
- 
+/* Responsividad */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #divin {
+        text-align: center;
+    }
 }
